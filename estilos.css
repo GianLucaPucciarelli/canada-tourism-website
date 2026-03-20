@@ -1,0 +1,530 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primario: rgba(123, 124, 123, 0.635);
+    --secundario: white;
+    --terciario: red;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Rubik", sans-serif;
+}
+
+.centrado{
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1280px;
+}
+ 
+section{
+    height: 100vh; 
+} 
+
+h2, 
+#ProximosViajes p{
+    text-transform: uppercase;
+}
+
+
+/* HEADER--------------------------------------------*/
+
+
+header{
+    padding: 0.25rem 0;
+    background-color:var(--primario);
+
+}
+
+header .centrado{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+header img {
+    width: 70px;        
+    border: 3px solid black;
+
+} 
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+    
+nav ul a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+    border-right: 1px solid blue;
+    padding-right: 1rem;
+}
+
+header nav a:hover,
+#herosection .centrado a:hover,
+#lugaresTurísticos .centrado article div a:hover,
+#PaquetesTurísticos .centrado .flex article a:hover{
+
+    font-weight: bold; 
+    font-size: 1.5rem;
+}
+
+
+/* HEROSECTION--------------------------------------------*/
+
+#herosection{
+    
+    height: 90vh;
+    background: var(--primario) url(img/paisajeCanada.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+
+#herosection .centrado{
+
+    padding: 8em 0;
+}
+
+#herosection .centrado p{
+    
+    font-size: 2rem;
+    color:var(--secundario);
+    text-shadow: 4px 3px 8px rgba(0, 0, 0, 0.78);
+}
+
+#herosection .centrado h1{
+    font-size: 8rem;
+    display: flex;
+    text-shadow: 4px 3px 8px rgba(0, 0, 0, 0.78);
+    
+}
+
+.parteCAyDA{ color: var(--terciario);  }
+.parteNA{ color:  var(--secundario);  }
+
+#herosection .centrado a{
+
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: var(--primario);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    color: black;
+    margin: 1rem 0;
+    transition: 0.2s ease-in-out;
+    /* cursor: pointer; */
+} 
+
+/* LUGARES TURISTICOS--------------------------------------------*/
+
+#lugaresTurísticos{
+    background-color: var(--primario);
+
+}
+
+#lugaresTurísticos h2{
+    font-size: 2.4rem;
+    text-align: center;
+    padding: 2rem;
+    
+}
+
+#lugaresTurísticos .centrado{
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;   
+}
+
+#lugaresTurísticos .centrado img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center; 
+
+}
+
+#lugaresTurísticos .centrado article div{
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 19rem; 
+    
+} 
+
+#lugaresTurísticos .centrado article div a{
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 0.25rem 1.25rem ;
+    border-radius: 0.5rem;
+    color: black;
+    width: fit-content;
+    font-weight: bold;
+
+}
+
+#lugaresTurísticos .centrado article div p{
+    font-size: 0.9rem;
+} 
+
+#lugaresTurísticos .centrado > * {
+    flex: 1;
+}
+
+/* PAQUETES TURISTICOS--------------------------------------------*/
+
+#PaquetesTurísticos{
+
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 243, 243, 0.731),
+      rgba(0, 0, 0, 0.819)
+    ), url("img/Terranova.png");
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center; 
+    object-fit: cover;
+    
+}
+
+#PaquetesTurísticos h2{
+    font-size: 2.4rem;
+    text-align: center;
+    padding: 2rem;
+    
+}
+
+#PaquetesTurísticos .centrado .flex{
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+
+}
+
+#PaquetesTurísticos .centrado .flex > * {
+    flex: 1;
+}
+
+#PaquetesTurísticos .centrado .flex article{
+    background-color: rgba(206, 204, 204, 0.408);
+    padding: 1.5rem;
+    border: 2px solid black;
+    border-radius: 1rem;
+    list-style-position: inside;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 20rem;
+
+}
+
+#PaquetesTurísticos .centrado .flex article h3{
+    text-transform: uppercase;
+    
+}
+
+#PaquetesTurísticos .centrado .flex article .precio{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#PaquetesTurísticos .centrado .flex article a{
+    text-decoration: none;
+    background-color: black;
+    color: var(--secundario);
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    
+}
+
+#PaquetesTurísticos .texto{
+    font-size: 1em;
+    padding: 1rem 8rem 2rem 8rem;   
+    text-align: center; 
+
+}
+
+/* GALERIA--------------------------------------------*/
+
+#galeria{
+    background-color: var(--primario);
+
+}
+
+#galeria h2{
+    font-size: 2rem;
+    text-align: center;
+    padding: 1rem 0;
+
+}
+
+#galeria .centrado{  
+    display: grid;
+
+    grid-template-areas: 
+    "figure1 figure2 figure3"
+    "figure1 figure4 figure5 ";
+ 
+    gap: 1rem;
+
+}
+
+#galeria .centrado img {
+    width: 100%;
+    height: 100%;
+    object-fit: center;
+}
+
+#galeria .centrado figure:nth-of-type(1){
+    grid-area: figure1;
+}
+
+#galeria .centrado figure:nth-of-type(2){
+    grid-area: figure2;
+}
+
+#galeria .centrado figure:nth-of-type(3){
+    grid-area: figure3;
+}
+
+#galeria .centrado figure:nth-of-type(4){
+    grid-area: figure4;
+}
+#galeria .centrado figure:nth-of-type(5){
+    grid-area: figure5;
+}
+
+
+/* PROXIMOS VIAJES--------------------------------------------*/
+
+        /* FORMULARIO--------------------------------------------*/
+
+#ProximosViajes h2{
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem 0;
+
+}
+
+#ProximosViajes p{
+    
+    text-align: center;
+    padding-bottom: 1.8rem; 
+
+}
+
+    #ProximosViajes .flex-Form-tabla{
+  
+        display: flex;
+        gap: 5rem;
+        align-items: center;
+    }    
+
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex: 1;
+    
+    }
+
+    form .flex {
+        display: flex;
+        gap: 1rem;
+    }
+
+    .form-grupo {
+        margin-top: 1rem;
+        width: 100%;
+    }
+    
+
+    .form-grupo label {
+        display: block;
+        margin-bottom: 0.25rem;
+        font-size: 1.25rem;
+        
+    } 
+
+    .form-grupo input, 
+    .form-grupo textarea,
+    .form-grupo select{
+
+        width: 100%;
+        border-radius: 4px;
+        background-color: gainsboro; 
+        border: none;
+        padding: 0.5rem;
+
+    }
+
+    .form-grupo textarea {
+        height: 60px;
+    }
+
+    .button {
+        width: 100%;
+        background-color: black;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    
+    }
+
+    
+    .button:hover {
+        background-color: cornflowerblue;
+        color: black;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+    }
+
+  /* TABLA--------------------------------------------*/
+
+
+    table {
+        flex: 1;
+        height: 100%; 
+        border-collapse: collapse;
+    }
+
+
+    thead {
+        background-color: black;
+        color: white;
+        text-transform: uppercase;
+        text-align: justify;
+    }
+
+    thead th {
+        padding: 1rem;
+    }
+      
+    tbody td {
+        padding: 1rem;
+
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: gainsboro;
+    
+    }
+
+    /* FOOTER--------------------------------------------*/
+
+    footer{
+        background-color: black;
+
+    }
+
+    footer .centrado{
+        color:white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.25rem;
+   
+    }
+
+    footer img{
+        width: 55px;
+        margin: 0.50rem;
+
+    }
+
+
+
+    @media (max-width: 1023px) {
+  
+
+
+
+        header .centrado{
+            
+            flex-direction: column;
+            /*
+            display: table-column;
+             justify-content: space-between;
+            align-items: center;
+            padding: 0 1rem;? */
+        }
+
+        header img {
+            margin: 1rem 0;
+
+        
+        } 
+
+    }
+
+
+    @media (max-width: 767px) {
+
+        header img {
+        
+            display: none;
+        
+        }
+
+        
+        header .centrado{
+        
+            padding: 1rem;
+        }
+
+
+
+
+
+
+
+     
+        
+        nav ul li:nth-of-type(4) a{
+
+
+            /* border-right: 1px solid var(--primario); */
+    
+            border-right: none;
+
+    
+        }
+        
+
+        /* HEROSECTION--------------------------------------------*/
+
+
+        #herosection .centrado h1{
+            font-size: 6rem;
+            /* text-shadow: 4px 3px 8px rgba(0, 0, 0, 0.78); */
+            
+        }
+
+
+
+
+
+    }
+
+
+   
